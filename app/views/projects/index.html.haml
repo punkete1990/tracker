@@ -1,0 +1,30 @@
+%h1 Projects
+%table.table.table-bordered
+  %tr
+    %th Title
+    %th Description
+    %th Begin time
+    %th End time
+    %th Projectstatus
+    %th Team Leader
+    %th Public
+    %th
+    %th
+    %th
+
+  - @projects.each do |project|
+    %tr
+      %td= project.title
+      %td= project.description
+      %td= project.begin_time
+      %td= project.end_time
+      %td= project.projectstatus.description
+      %td= project.user.email
+      %td= project.public
+      %td= link_to 'Show', project, :class => "btn-mini btn-info" 
+      %td= link_to 'Edit', edit_project_path(project), :class => "btn-mini btn-info" 
+      %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete,:class => "btn-mini btn-danger" 
+
+%br
+= link_to 'New Project', new_project_path,:class => "btn btn-primary" 
+= link_to 'Tasks', tasks_path, :class => "btn btn-primary"

@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1333440992.0244741:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%f849810961e03f8f435273eb64814a9dI"logical_path;
+FI"glyphicons-halflings.png;
+TI"pathname;
+F"u/Users/lztr/.rvm/gems/ruby-1.9.3-p0@labs/gems/bootstrap-sass-2.0.2/vendor/assets/images/glyphicons-halflings.pngI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-04-03T01:07:48-06:00;
+FI"length;
+FI"	4352;
+FI"digest;
+F"%a8e4a855f94323fc3c394517849db246I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

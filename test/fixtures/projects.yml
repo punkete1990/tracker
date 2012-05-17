@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  begin_time: 2012-04-02 20:46:10
+  end_time: 2012-04-02 20:46:10
+  projectstatus: 
+  user: 
+  public: false
+
+two:
+  title: MyString
+  description: MyText
+  begin_time: 2012-04-02 20:46:10
+  end_time: 2012-04-02 20:46:10
+  projectstatus: 
+  user: 
+  public: false

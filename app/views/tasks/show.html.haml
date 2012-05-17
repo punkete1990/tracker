@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Project:
+  = @task.project.title
+%p
+  %b Developer:
+  = @task.user.email
+%p
+  %b Title:
+  = @task.title
+%p
+  %b Description:
+  = @task.description
+%p
+  %b Begin time:
+  = @task.begin_time
+%p
+  %b End time:
+  = @task.end_time
+%p
+  %b Difficulty:
+  = @task.difficulty
+%p
+  %b Tasktype:
+  = @task.tasktype.description
+%p
+  %b Finished:
+  = @task.finished
+
+= link_to 'Edit', edit_task_path(@task)
+\|
+= link_to 'Back', tasks_path

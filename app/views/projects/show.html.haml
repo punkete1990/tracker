@@ -1,0 +1,28 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @project.title
+%p
+  %b Description:
+  = @project.description
+%p
+  %b Begin time:
+  = @project.begin_time
+%p
+  %b End time:
+  = @project.end_time
+%p
+  %b Projectstatus:
+  = @project.projectstatus.description
+%p
+  %b Team Leader:
+  = @project.user.email
+%p
+  %b Public:
+  = @project.public
+
+= link_to 'Edit', edit_project_path(@project)
+\|
+= link_to 'Back', projects_path
+

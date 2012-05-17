@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tracker</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body data-spy="scroll">
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+<a class="brand pull-left" href="#">
+  Tracker@On-line
+</a>
+
+<div class="container">
+<ul class="nav">
+  <li class="active">
+    <a href="../projects/">Project</a>
+  </li>
+  <li><a href="../tasks/">Task</a></li>
+  </ul>
+<form class="navbar-form pull-right">
+  <% if user_signed_in? %>  
+    Signed in as <%= current_user.email %>. Not you? 
+    <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
+    |
+    <% if Profile.exists?(current_user.id) %>  
+        <%= link_to "Profile", edit_profile_path(Profile.find(current_user.id)) %>      
+    <% else %>  
+        <%= p = Profile.new %>  
+        <%= p.id = current_user.id %>
+        <%= p.user_id = current_user.id %>
+        <%= p.save %>    
+                <%= link_to "Profile", edit_profile_path(Profile.find(current_user.id)) %>      
+  <% end %>      
+  <% else %>  
+    <%= link_to "Sign up", new_user_registration_path %> or  
+    <%= link_to "Sign in", new_user_session_path %>  
+  <% end %>  
+</form>  
+</div> </div> 
+</div> 
+<div class="navbar navbar-fixed-bottom">
+<div class="navbar-inner ">
+<div class="container " >
+<form class="navbar-form pull-right">
+Powered by LztrVga
+</form>
+</div></div>
+</div>
+</br>
+</br>
+<%= yield %>
+
+</body>
+</html>
