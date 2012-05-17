@@ -1,9 +1,9 @@
 Tracker::Application.routes.draw do
+  resources :projects
+
   resources :profiles
 
   devise_for :users
-
-  resources :projects
 
   resources :tasks
 

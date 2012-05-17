@@ -2,18 +2,18 @@
 
 one:
   title: MyString
-  description: MyText
-  begin_time: 2012-04-02 20:46:10
-  end_time: 2012-04-02 20:46:10
+  description: MyString
+  begin_time: 2012-05-17 15:46:07
+  end_time: 2012-05-17 15:46:07
   projectstatus: 
   user: 
   public: false
 
 two:
   title: MyString
-  description: MyText
-  begin_time: 2012-04-02 20:46:10
-  end_time: 2012-04-02 20:46:10
+  description: MyString
+  begin_time: 2012-05-17 15:46:07
+  end_time: 2012-05-17 15:46:07
   projectstatus: 
   user: 
   public: false

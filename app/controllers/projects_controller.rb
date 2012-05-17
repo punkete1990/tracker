@@ -1,17 +1,9 @@
 class ProjectsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show, :index]  
   # GET /projects
   # GET /projects.json
   def index
-    if (current_user != nil)
-        @projects = Project.joins(:task).where("public = :public or projects.user_id = :current_user or tasks.user_id = :current_user",{:current_user => current_user, 
-                                               :public => true, 
-                                               })
-    else
-                @projects = Project.where(:public => true)
-        
-    end
-        
+    @projects = Project.all
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @projects }

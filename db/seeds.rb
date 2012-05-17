@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+projectstatus = Projectstatus.create! :description => 'Inicial'
+projectstatus = Projectstatus.create! :description => 'Diseño'
+projectstatus = Projectstatus.create! :description => 'Desarrollo'
+projectstatus = Projectstatus.create! :description => 'Pruebas'
+projectstatus = Projectstatus.create! :description => 'Instalacion'
